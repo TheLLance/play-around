@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Titanious Tech | Managed IT Services</title>
+  <script src="tailwind.config.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body class="bg-titan-base text-white font-sans">
+  <div class="min-h-screen bg-[radial-gradient(circle_at_20%_20%,#1b2240,#0b0f1f)]">
+    <header class="sticky top-0 z-20 backdrop-blur-xl bg-slate-950/70 border-b border-titan-border">
+      <nav class="mx-auto flex w-full max-w-6xl flex-wrap items-center justify-between gap-4 px-6 py-5">
+        <div class="text-xl font-semibold tracking-wide">
+          Titanious <span class="text-titan-accent">Tech</span>
+        </div>
+        <div class="flex flex-wrap items-center gap-6 text-sm font-medium text-white/70">
+          <a class="transition hover:text-white" href="#services">Services</a>
+          <a class="transition hover:text-white" href="#coverage">Coverage</a>
+          <a class="transition hover:text-white" href="#insights">Insights</a>
+          <a class="transition hover:text-white" href="#contact">Contact</a>
+        </div>
+        <a
+          class="rounded-full bg-gradient-to-r from-titan-accent to-titan-accent2 px-5 py-2 text-sm font-semibold text-slate-950 shadow-[0_12px_30px_rgba(98,246,255,0.25)]"
+          href="#contact"
+        >
+          Book a Strategy Call
+        </a>
+      </nav>
+    </header>
+
+    <main id="app">
+      <section class="mx-auto grid max-w-6xl gap-12 px-6 pb-12 pt-20 lg:grid-cols-[1.15fr_0.85fr]">
+        <div>
+          <p class="text-sm uppercase tracking-[0.3em] text-white/60">Managed IT & Cybersecurity</p>
+          <h1 class="mt-4 text-4xl font-semibold leading-tight sm:text-5xl">
+            Build a resilient, always-on tech backbone with Titanious Tech.
+          </h1>
+          <p class="mt-6 text-lg text-white/70">
+            We deliver proactive monitoring, rapid response, and future-proof infrastructure so your teams move faster
+            while staying secure. From cloud migration to 24/7 help desk, Titanious Tech keeps your operations
+            unstoppable.
+          </p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a
+              class="rounded-full bg-gradient-to-r from-titan-accent to-titan-accent2 px-6 py-3 text-sm font-semibold text-slate-950"
+              href="#contact"
+            >
+              Schedule a Consultation
+            </a>
+            <a class="rounded-full border border-titan-border px-6 py-3 text-sm font-medium" href="#services">
+              Explore Services
+            </a>
+          </div>
+          <div class="mt-10 grid gap-4 sm:grid-cols-3">
+            <div class="rounded-2xl border border-titan-border bg-titan-surface p-4 shadow-glow">
+              <p class="text-sm text-white/70">Trusted by</p>
+              <p class="mt-2 text-2xl font-semibold">120+ teams</p>
+            </div>
+            <div class="rounded-2xl border border-titan-border bg-titan-surface p-4 shadow-glow">
+              <p class="text-sm text-white/70">Avg ticket close</p>
+              <p class="mt-2 text-2xl font-semibold">42 min</p>
+            </div>
+            <div class="rounded-2xl border border-titan-border bg-titan-surface p-4 shadow-glow">
+              <p class="text-sm text-white/70">Compliance</p>
+              <p class="mt-2 text-2xl font-semibold">SOC 2 + HIPAA</p>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-6">
+          <div class="rounded-3xl border border-titan-border bg-titan-surface p-6 shadow-glow">
+            <div class="flex items-center justify-between">
+              <h3 class="text-lg font-semibold">Live Service Pulse</h3>
+              <span class="rounded-full bg-white/10 px-3 py-1 text-xs uppercase tracking-wide text-white/70">Realtime</span>
+            </div>
+            <p class="mt-3 text-sm text-white/60">
+              Instant visibility into uptime, threats, and business continuity across your stack.
+            </p>
+            <div class="mt-6 grid gap-4 sm:grid-cols-2">
+              <div
+                v-for="metric in metrics"
+                :key="metric.label"
+                class="rounded-2xl border border-titan-border/80 bg-white/5 p-4"
+              >
+                <p class="text-2xl font-semibold text-white">{{ metric.value }}</p>
+                <p class="text-xs uppercase tracking-wide text-white/60">{{ metric.label }}</p>
+              </div>
+            </div>
+          </div>
+          <div class="rounded-3xl border border-titan-border bg-gradient-to-r from-titan-accent/20 to-titan-accent2/20 p-6 shadow-glow">
+            <h3 class="text-lg font-semibold">Strategic Coverage Map</h3>
+            <p class="mt-3 text-sm text-white/70">
+              Nationwide support with local engagement, backed by 24/7 security operations.
+            </p>
+            <div class="mt-6 flex flex-wrap gap-3 text-sm">
+              <span class="rounded-full border border-white/20 px-4 py-2">Remote-first teams</span>
+              <span class="rounded-full border border-white/20 px-4 py-2">Dedicated vCIO</span>
+              <span class="rounded-full border border-white/20 px-4 py-2">On-site surge support</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="mx-auto max-w-6xl px-6 py-16">
+        <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+          <div>
+            <h2 class="text-3xl font-semibold">Concierge-grade managed services</h2>
+            <p class="mt-3 text-white/70">
+              Everything you need to run a modern organization, delivered by an elite IT partner.
+            </p>
+          </div>
+          <span class="rounded-full border border-white/20 px-4 py-2 text-sm text-white/70">End-to-end delivery</span>
+        </div>
+        <div class="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div
+            v-for="service in services"
+            :key="service.title"
+            class="rounded-2xl border border-titan-border bg-titan-surface p-6 shadow-glow"
+          >
+            <h3 class="text-lg font-semibold">{{ service.title }}</h3>
+            <p class="mt-2 text-sm text-white/70">{{ service.description }}</p>
+            <p class="mt-4 text-xs uppercase tracking-[0.2em] text-titan-accent">{{ service.tag }}</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="coverage" class="mx-auto max-w-6xl px-6 py-16">
+        <div class="rounded-3xl border border-titan-border bg-titan-surface p-8 shadow-glow">
+          <div class="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between">
+            <div>
+              <h2 class="text-3xl font-semibold">Nationwide coverage, local feel</h2>
+              <p class="mt-3 text-white/70">
+                Titanious Tech is built for distributed teams with unified visibility, secure access, and a single point
+                of accountability.
+              </p>
+            </div>
+            <div class="flex flex-wrap gap-3">
+              <div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm">14-day onboarding</div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm">Unified command center</div>
+              <div class="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm">Immutable backups</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="insights" class="mx-auto max-w-6xl px-6 py-16">
+        <h2 class="text-3xl font-semibold">Insights that move your business forward</h2>
+        <p class="mt-3 text-white/70">We translate complex technology into tangible outcomes for leadership teams.</p>
+        <div class="mt-10 grid gap-6 lg:grid-cols-3">
+          <div class="rounded-2xl border border-titan-border bg-titan-surface p-6 shadow-glow">
+            <h3 class="text-lg font-semibold">Executive Metrics</h3>
+            <p class="mt-2 text-sm text-white/70">
+              Monthly reporting that ties IT investments to productivity, revenue protection, and customer trust.
+            </p>
+          </div>
+          <div class="rounded-2xl border border-titan-border bg-gradient-to-r from-titan-accent/20 to-titan-accent2/20 p-6 shadow-glow">
+            <h3 class="text-lg font-semibold">Risk Heatmaps</h3>
+            <p class="mt-2 text-sm text-white/70">
+              Continuous vulnerability scoring with clear mitigation priorities to reduce exposure.
+            </p>
+          </div>
+          <div class="rounded-2xl border border-titan-border bg-titan-surface p-6 shadow-glow">
+            <h3 class="text-lg font-semibold">Growth Enablement</h3>
+            <p class="mt-2 text-sm text-white/70">
+              Scalable infrastructure plans designed for mergers, acquisitions, and rapid expansion.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="mx-auto max-w-5xl px-6 pb-20 pt-10">
+        <div class="rounded-3xl border border-white/20 bg-gradient-to-r from-titan-accent/20 to-titan-accent2/20 p-10 text-center shadow-glow">
+          <h2 class="text-3xl font-semibold">Ready to elevate your IT strategy?</h2>
+          <p class="mt-3 text-white/70">Connect with Titanious Tech for a tailored assessment and discover how seamless IT can be.</p>
+          <div class="mt-6 flex flex-wrap justify-center gap-4">
+            <a
+              class="rounded-full bg-gradient-to-r from-titan-accent to-titan-accent2 px-6 py-3 text-sm font-semibold text-slate-950"
+              href="mailto:hello@titanious.tech"
+            >
+              hello@titanious.tech
+            </a>
+            <a class="rounded-full border border-white/30 px-6 py-3 text-sm" href="tel:+18005550199">
+              +1 (800) 555-0199
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-titan-border px-6 py-8 text-center text-sm text-white/60">
+      © 2024 Titanious Tech. Managed IT services built for modern enterprises.
+    </footer>
+  </div>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
